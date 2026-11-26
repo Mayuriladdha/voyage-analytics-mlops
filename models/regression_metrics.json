@@ -1,0 +1,23 @@
+{
+ "best_model": "random_forest",
+ "results": {
+  "linear_regression": {
+   "rmse": 103.16726648421854,
+   "mae": 81.2819139690715,
+   "r2": 0.9192263095571852,
+   "train_seconds": 0.43
+  },
+  "hist_gradient_boosting": {
+   "rmse": 16.08390685499934,
+   "mae": 12.611613658260593,
+   "r2": 0.9980367790625374,
+   "train_seconds": 3.63
+  },
+  "random_forest": {
+   "rmse": 2.3771577663747454,
+   "mae": 0.23200667384157025,
+   "r2": 0.9999571153282762,
+   "train_seconds": 14.47
+  }
+ }
+}

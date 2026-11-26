@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-price-api
+  labels: {app: flight-price-api}
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: flight-price-api}
+  template:
+    metadata:
+      labels: {app: flight-price-api}
+    spec:
+      containers:
+        - name: api
+          image: mayuriladdha/voyage-flight-price:latest   # Jenkins replaces the tag with the build number
+          ports:
+            - containerPort: 5000
+          readinessProbe:
+            httpGet: {path: /health, port: 5000}
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /health, port: 5000}
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests: {cpu: 200m, memory: 256Mi}
+            limits: {cpu: 500m, memory: 512Mi}

@@ -1,0 +1,8 @@
+-r requirements-api.txt
+mlflow>=2.14
+streamlit>=1.35
+matplotlib
+seaborn
+pytest
+requests
+# Airflow is installed in its own environment/container (see airflow/README.md)
