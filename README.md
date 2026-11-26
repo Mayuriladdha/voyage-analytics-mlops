@@ -1,6 +1,6 @@
 # Voyage Analytics: Integrating MLOps in Travel
 
-End-to-end MLOps capstone (AlmaBetter) by **Mayuri Laddha**. Three travel datasets (users, flights, hotels) feed three models; the **flight price regression** model is productionised with Flask, Docker, Kubernetes, Airflow, Jenkins and MLflow.
+End-to-end MLOps capstone by **Mayuri Laddha**. Three travel datasets (users, flights, hotels) feed three models; the **flight price regression** model is productionised with Flask, Docker, Kubernetes, Airflow, Jenkins and MLflow.
 
 | Model | Method | Test result |
 |---|---|---|
